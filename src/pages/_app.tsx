@@ -4,9 +4,11 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 
 import Theme from "shared/styles/Theme";
+import Layout from "shared/providers/Layout";
 import GlobalStyle from "shared/styles/GlobalStyle";
 import GlobalContext from "shared/providers/context/GlobalContext";
 import GlobalType from "shared/providers/context/GlobalContext/type";
+import Head from "shared/seo/Head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [state, setState] = useState({} as GlobalType);
@@ -14,8 +16,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalContext.Provider value={{ state, setState }}>
       <ThemeProvider theme={Theme("light")}>
+        <Head />
         <GlobalStyle />
-        <Component {...pageProps} />;
+
+        <Layout>
+          <Component {...pageProps} />;
+        </Layout>
       </ThemeProvider>
     </GlobalContext.Provider>
   );

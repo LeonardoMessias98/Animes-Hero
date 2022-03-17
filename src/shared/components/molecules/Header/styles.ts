@@ -14,6 +14,7 @@ export const Container = styled(Layout.Header)`
     position: relative;
     width: 180px;
     height: 56px;
+    cursor: pointer;
   }
 `;
 

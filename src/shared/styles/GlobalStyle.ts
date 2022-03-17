@@ -17,8 +17,12 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     height: 100%;
   }
 
+  #__next,
   .ant-layout-content  {
     background-color: ${(props) => props.theme.colors.backgroundColor};
+  }
+
+  .ant-layout-content  {
     width: 100%;
     height: 100%;
   }
