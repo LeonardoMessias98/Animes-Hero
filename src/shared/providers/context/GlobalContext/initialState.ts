@@ -1,10 +1,14 @@
-import { IAnimeProps } from "shared/dtos";
+import { IAnime, ICategory } from "shared/dto";
 import { GlobalContextProps } from ".";
 
 const InitialState: GlobalContextProps = {
   state: {
     default: "",
-    trendingAnimes: [{} as IAnimeProps],
+    singleAnime: {} as IAnime,
+    animes: [{} as IAnime],
+    categories: [{} as ICategory],
+    trendingAnimes: [{} as IAnime],
+    animesByCategory: [[{} as IAnime]],
   },
   setState: () => {},
 };

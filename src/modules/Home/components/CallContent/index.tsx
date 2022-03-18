@@ -3,6 +3,17 @@ import React from "react";
 import { Container, Title, Description, Button } from "./styles";
 
 const CallContent = () => {
+  const handleSeeMoreAnimes = () => {
+    const element = document.querySelector(`.trending-animes`);
+
+    if (element) {
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Container>
       <Title>
@@ -15,7 +26,7 @@ const CallContent = () => {
         <span>.</span>
       </Description>
 
-      <Button>Mais animes</Button>
+      <Button onClick={handleSeeMoreAnimes}>Mais animes</Button>
     </Container>
   );
 };

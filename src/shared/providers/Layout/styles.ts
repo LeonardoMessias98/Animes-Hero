@@ -10,7 +10,8 @@ export const Container = styled(Layout)`
 
 export const Content = styled(Layout.Content)`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const Header = styled(Layout.Header)``;

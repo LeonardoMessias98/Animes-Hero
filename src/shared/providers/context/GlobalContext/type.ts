@@ -1,8 +1,12 @@
-import { IAnimeProps } from "shared/dtos";
+import { IAnime, ICategory } from "shared/dto";
 
 type GlobalType = {
   default: string;
-  trendingAnimes: IAnimeProps[];
+  singleAnime: IAnime;
+  animes: IAnime[];
+  categories: ICategory[];
+  trendingAnimes: IAnime[];
+  animesByCategory: IAnime[][];
 };
 
 export default GlobalType;

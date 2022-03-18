@@ -1,4 +1,4 @@
-export interface IAnimeProps {
+export interface IAnime {
   attributes: {
     abbreviatedTitles: string[];
     ageRating: string;
@@ -40,4 +40,34 @@ export interface IAnimeProps {
   };
   id: string;
   links: { self: string };
+}
+export interface ICategory {
+  attributes: {
+    childCount: number;
+    createdAt: string;
+    description: string;
+    nsfw: boolean;
+    slug: string;
+    title: string;
+    totalMediaCount: number;
+    updatedAt: string;
+
+    id: string;
+    links: { self: string };
+  };
+  relationships: {
+    anime: {
+      links: { self: string; related: string };
+    };
+    drama: {
+      links: { self: string; related: string };
+    };
+    manga: {
+      links: { self: string; related: string };
+    };
+    parent: {
+      links: { self: string; related: string };
+    };
+    type: string;
+  };
 }

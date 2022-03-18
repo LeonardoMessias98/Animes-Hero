@@ -1,30 +1,15 @@
 import styled from "styled-components";
 
-interface ITrendingCardProps {
-  focusedCard: number;
-}
-
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-
-  z-index: 1;
-`;
-
-export const TrendingCard = styled.div<ITrendingCardProps>`
   width: 360px;
-  height: 720px;
-  margin: 0 0.75rem;
+  height: 522px;
+  margin-right: 1rem;
   position: relative;
-  overflow: hidden;
   cursor: pointer;
 
   img {
     border-radius: 16px;
-    object-fit: cover;
   }
-
-  transition: transform 0.4s;
 
   div.shadow {
     position: absolute;
@@ -36,16 +21,20 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
     border-radius: 1rem;
   }
 
-  &:nth-child(${(props) => props.focusedCard}) {
+  &:hover {
+    border: 4px solid ${(props) => props.theme.colors.primary};
     transform: scale(1.1);
-    border: 6px solid ${(props) => props.theme.colors.primary};
-    border-radius: 20px;
+    border-radius: 22px;
 
     .info {
       visibility: visible;
     }
 
     div.shadow {
+      width: 101%;
+      left: -1px;
+      bottom: -1px;
+
       height: 40%;
       background: linear-gradient(
         180deg,
@@ -61,7 +50,6 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
     font-weight: 700;
     font-size: 32px;
     line-height: 37px;
-    /* identical to box height */
 
     color: #ffffff;
 

@@ -1,22 +1,35 @@
 import type { NextPage } from "next";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import axios from "axios";
 
 import HomeModule from "modules/Home";
+import { IAnime, ICategory } from "shared/dto";
 import GlobalContext from "shared/providers/context/GlobalContext";
-import { IAnimeProps } from "shared/dtos";
-import { useEffect } from "react";
 
 interface IHomePageProps {
-  trendingAnimes: Array<IAnimeProps>;
+  trendingAnimes: Array<IAnime>;
+  animesByCategory: IAnime[][];
+  categories: ICategory[];
+  animes: Array<IAnime>;
 }
 
-const HomePage: NextPage<IHomePageProps> = ({ trendingAnimes }) => {
+const HomePage: NextPage<IHomePageProps> = ({
+  animesByCategory,
+  trendingAnimes,
+  categories,
+  animes,
+}) => {
   const { state, setState } = useContext(GlobalContext);
 
   useEffect(() => {
     if (trendingAnimes && trendingAnimes.length > 0) {
-      setState({ ...state, trendingAnimes });
+      setState({
+        ...state,
+        trendingAnimes,
+        categories,
+        animesByCategory,
+        animes,
+      });
     }
   }, [trendingAnimes]);
 
@@ -24,6 +37,14 @@ const HomePage: NextPage<IHomePageProps> = ({ trendingAnimes }) => {
 };
 
 export async function getStaticProps() {
+  const getAnimes = async () => {
+    const response = await axios.get(
+      "https://kitsu.io/api/edge/anime?page%5Blimit%5D=20&page%5Boffset%5D=0"
+    );
+
+    return response.data.data;
+  };
+
   const getTrendingAnimes = async () => {
     const response = await axios.get(
       "https://kitsu.io/api/edge/trending/anime"
@@ -32,11 +53,39 @@ export async function getStaticProps() {
     return response.data.data;
   };
 
+  const getAnimesAndCategories = async () => {
+    try {
+      const response = await axios.get(
+        "https://kitsu.io/api/edge/categories?page%5Blimit%5D=15&page%5Boffset%5D=0"
+      );
+
+      const categories = response.data.data;
+
+      const animes = [];
+
+      for (const category of categories) {
+        const response = await axios.get(
+          `https://kitsu.io/api/edge/categories/${category.id}/anime?page%5Blimit%5D=20&page%5Boffset%5D=0`
+        );
+
+        animes.push(response.data.data);
+      }
+
+      return { animes, categories };
+    } catch (error) {}
+    return { animes: [], categories: [] };
+  };
+
+  const animes = await getAnimes();
   const trendingAnimes = await getTrendingAnimes();
+  const animesAndCategories = await getAnimesAndCategories();
 
   return {
     props: {
+      animes,
       trendingAnimes,
+      categories: animesAndCategories.categories,
+      animesByCategory: animesAndCategories.animes,
     },
     revalidate: 60 * 5,
   };

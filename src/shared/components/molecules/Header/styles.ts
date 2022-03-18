@@ -4,9 +4,11 @@ import styled from "styled-components";
 export const Container = styled(Layout.Header)`
   display: flex;
   justify-content: space-between;
+  background: none !important ;
 
   width: 100%;
   max-width: 1900px;
+  z-index: 5;
 
   padding: 4rem 4rem 2rem;
 
