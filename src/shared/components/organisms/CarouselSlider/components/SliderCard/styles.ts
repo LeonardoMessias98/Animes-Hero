@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 360px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 380px;
   height: 522px;
+`;
+
+export const Content = styled.div`
+  width: 360px;
+  height: 100%;
   margin-right: 1rem;
   position: relative;
   cursor: pointer;
@@ -48,8 +57,8 @@ export const Container = styled.div`
     font-family: "Asap";
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 2rem;
+    line-height: 2.313rem;
 
     color: #ffffff;
 
@@ -77,8 +86,8 @@ export const Container = styled.div`
       font-family: "Asap";
       font-style: normal;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
       margin: 0;
 
       color: #ffffff;
@@ -90,8 +99,8 @@ export const Container = styled.div`
       font-family: "Asap";
       font-style: normal;
       font-weight: 500;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
 
       color: #ffffff;
 

@@ -22,15 +22,15 @@ export const Title = styled.h1`
 
   color: #ffffff;
 
-  text-shadow: 0px 8px 60px #000000;
+  text-shadow: 0 0.5rem 3.75rem #000000;
 `;
 
 export const Description = styled.p`
   font-family: "Asap", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 
   color: #ffffff;
   width: 100%;
@@ -42,8 +42,8 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
-  width: 264px;
-  height: 64px;
+  width: 16.5rem;
+  height: 4rem;
 
   border: 4px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
@@ -53,8 +53,8 @@ export const Button = styled.button`
   font-family: "Asap", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 
   color: #ffffff;
   cursor: pointer;

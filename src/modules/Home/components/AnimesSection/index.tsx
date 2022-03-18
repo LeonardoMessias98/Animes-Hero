@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "react-alice-carousel/lib/alice-carousel.css";
 
 import GlobalContext from "shared/providers/context/GlobalContext";
 

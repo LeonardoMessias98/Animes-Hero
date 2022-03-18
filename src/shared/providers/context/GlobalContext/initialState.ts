@@ -8,6 +8,7 @@ const InitialState: GlobalContextProps = {
     animes: [{} as IAnime],
     categories: [{} as ICategory],
     trendingAnimes: [{} as IAnime],
+    relatedAnimes: [{} as IAnime],
     animesByCategory: [[{} as IAnime]],
   },
   setState: () => {},

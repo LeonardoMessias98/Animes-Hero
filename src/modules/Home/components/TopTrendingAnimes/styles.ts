@@ -59,8 +59,8 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
     font-family: "Asap";
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 2rem;
+    line-height: 2.313rem;
     /* identical to box height */
 
     color: #ffffff;
@@ -89,8 +89,8 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
       font-family: "Asap";
       font-style: normal;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
       margin: 0;
 
       color: #ffffff;
@@ -102,8 +102,8 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
       font-family: "Asap";
       font-style: normal;
       font-weight: 500;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
 
       color: #ffffff;
 

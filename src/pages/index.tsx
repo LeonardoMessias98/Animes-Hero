@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { useContext, useEffect } from "react";
-import axios from "axios";
 
 import HomeModule from "modules/Home";
 import { IAnime, ICategory } from "shared/dto";
 import GlobalContext from "shared/providers/context/GlobalContext";
+import { api } from "shared/utils/api";
 
 interface IHomePageProps {
   trendingAnimes: Array<IAnime>;
@@ -38,25 +38,23 @@ const HomePage: NextPage<IHomePageProps> = ({
 
 export async function getStaticProps() {
   const getAnimes = async () => {
-    const response = await axios.get(
-      "https://kitsu.io/api/edge/anime?page%5Blimit%5D=20&page%5Boffset%5D=0"
+    const response = await api.get(
+      "/anime?page%5Blimit%5D=20&page%5Boffset%5D=0"
     );
 
     return response.data.data;
   };
 
   const getTrendingAnimes = async () => {
-    const response = await axios.get(
-      "https://kitsu.io/api/edge/trending/anime"
-    );
+    const response = await api.get("/trending/anime");
 
     return response.data.data;
   };
 
   const getAnimesAndCategories = async () => {
     try {
-      const response = await axios.get(
-        "https://kitsu.io/api/edge/categories?page%5Blimit%5D=15&page%5Boffset%5D=0"
+      const response = await api.get(
+        "/categories?page%5Blimit%5D=15&page%5Boffset%5D=0"
       );
 
       const categories = response.data.data;
@@ -64,8 +62,8 @@ export async function getStaticProps() {
       const animes = [];
 
       for (const category of categories) {
-        const response = await axios.get(
-          `https://kitsu.io/api/edge/categories/${category.id}/anime?page%5Blimit%5D=20&page%5Boffset%5D=0`
+        const response = await api.get(
+          `/categories/${category.id}/anime?page%5Blimit%5D=20&page%5Boffset%5D=0`
         );
 
         animes.push(response.data.data);

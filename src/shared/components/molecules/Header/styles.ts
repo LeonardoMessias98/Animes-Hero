@@ -10,7 +10,7 @@ export const Container = styled(Layout.Header)`
   max-width: 1900px;
   z-index: 5;
 
-  padding: 4rem 4rem 2rem;
+  padding: 64px 4rem 32px;
 
   figure.logo {
     position: relative;

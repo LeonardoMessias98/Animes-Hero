@@ -4,11 +4,6 @@ export const Container = styled.div`
   .alice-carousel__stage {
     padding: 40px 20px !important;
   }
-
-  .alice-carousel__stage-item {
-    width: 400px !important;
-  }
-
   .alice-carousel__prev-btn {
     left: 0;
   }
@@ -34,8 +29,8 @@ export const Container = styled.div`
 
       border: 4px solid ${(props) => props.theme.colors.primary};
       border-radius: 50%;
-      width: 86px;
-      height: 86px;
+      width: 5.375rem;
+      height: 5.375rem;
 
       svg {
         font-size: 50px;
