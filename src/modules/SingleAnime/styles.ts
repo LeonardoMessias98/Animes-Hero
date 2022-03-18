@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface IContentProps {
+  imageUrl: string;
+}
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -31,7 +35,8 @@ export const TrailerModal = styled.div`
     cursor: pointer;
   }
 `;
-export const Content = styled.div`
+
+export const Content = styled.div<IContentProps>`
   display: flex;
   justify-content: center;
 

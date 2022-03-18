@@ -1,4 +1,3 @@
-import head from "next/head";
 import React, { useContext, useState } from "react";
 import { FiX } from "react-icons/fi";
 import YouTube from "react-youtube";
@@ -34,7 +33,7 @@ const SingleAnime = () => {
       )}
 
       <Container>
-        <Content imageUrl={state.singleAnime?.attributes?.coverImage?.original}>
+        <Content imageUrl={state.singleAnime?.attributes?.coverImage?.large}>
           <div className="wrapper">
             <div className="options">
               <h1>{state.singleAnime?.attributes?.canonicalTitle}</h1>
