@@ -51,7 +51,7 @@ const SingleAnime = () => {
 
             <div className="sinopse">
               <h3>Sinopse:</h3>
-              <p>{state.singleAnime.attributes.synopsis}</p>
+              <p>{state.singleAnime?.attributes?.synopsis}</p>
             </div>
           </div>
         </Content>

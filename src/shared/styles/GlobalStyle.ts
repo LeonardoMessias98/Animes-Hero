@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 type GlobalStyleProps = {
-  theme: string;
+  theme: { colors: { backgroundColor: string } };
 };
 
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
