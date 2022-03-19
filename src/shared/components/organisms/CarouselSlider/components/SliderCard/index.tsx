@@ -29,7 +29,7 @@ const SliderCard = ({ data, ...rest }: ISliderCard) => {
           <section>
             <span>
               {data.attributes.episodeCount &&
-                `episodio ${data.attributes.episodeCount}`}
+                `episódio ${data.attributes.episodeCount}`}
             </span>
 
             <div className="note">

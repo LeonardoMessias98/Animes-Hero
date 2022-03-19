@@ -48,8 +48,8 @@ export const Input = styled.input`
   font-family: "Asap";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 2.5rem;
+  line-height: 2.875rem;
 
   text-align: center;
 

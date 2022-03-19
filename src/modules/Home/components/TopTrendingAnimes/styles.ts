@@ -65,7 +65,6 @@ export const TrendingCard = styled.div<ITrendingCardProps>`
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.313rem;
-    /* identical to box height */
 
     color: #ffffff;
 

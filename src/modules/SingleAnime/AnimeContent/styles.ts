@@ -93,8 +93,21 @@ export const Wrapper = styled.section`
       color: #fff;
       margin: 0;
 
-      max-height: 300px;
       overflow-y: auto;
+      max-height: 300px;
+      padding: 0 20px 0 0;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: ${(props) => props.theme.colors.primary};
+      }
     }
 
     h3,

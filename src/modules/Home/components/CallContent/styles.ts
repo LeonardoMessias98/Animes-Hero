@@ -16,6 +16,7 @@ export const Container = styled.div`
   @media (max-width: 1200px) {
     position: relative;
     margin-top: 4rem;
+    margin-left: 0;
   }
 `;
 
@@ -49,7 +50,7 @@ export const Description = styled.p`
 
 export const Button = styled.button`
   width: 16.5rem;
-  height: 4rem;
+  height: 5rem;
 
   border: 4px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;

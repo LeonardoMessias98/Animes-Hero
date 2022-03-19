@@ -39,7 +39,7 @@ const TopTrendingAnimes = () => {
             <section>
               <span>
                 {anime.attributes.episodeCount &&
-                  `episodio ${anime.attributes.episodeCount}`}
+                  `episódio ${anime.attributes.episodeCount}`}
               </span>
 
               <div className="note">

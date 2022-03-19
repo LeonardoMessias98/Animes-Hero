@@ -6,7 +6,6 @@ export const Container = styled.div`
 
   width: 100%;
   max-width: 1800px;
-  margin-top: 4rem;
   padding: 0 30px;
 
   h2 {
