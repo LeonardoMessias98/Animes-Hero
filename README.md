@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://i.imgur.com/cT4NV0x.png)
 
-## Getting Started
+## Funcionalidades
 
-First, run the development server:
+A aplicação desenvolvida contém três telas
+ * Pagina Home - essa tela é principal da aplicação, ela é responsáveis por mostrar algumas listas de animes como os trending animes e animes por cada categoria.
 
-```bash
-npm run dev
-# or
-yarn dev
+ * Pagina Search - nessa tela permitimos o usuário pesquisar por animes, a pesquisa é feita atravez do nome do anime no qual o usuário deseja encontrar.
+
+ * Pagina Single Anime - nessa tela mostramos algumas informações sobre o anime selecionado, também é possível assistir um trailer sobre anime e acessar um slider de animes relacionados.
+
+## Arquitetura do código
+
+Sobre a arquitetura do código ela foi escolhida com base na arquitetura que venho utilizando tanto no meu trabalho quanto nos meus projetos academicos.
+  * `src` – nessa pasta fica contido todo o source code da minha aplicação
+    *  `pages` – contém as paginas da aplicação
+    *  `modules` – aqui ficam os modulos das minhas paginas
+    *  `shared` – nessa pasta fica tudo o que é compartilhado tanto de pagina para pagina como de componente para componente
+        * `assets` – nessa pasta contém todas minhas imagens e icones que são utilizados na aplicação
+          * `icons` – nessa pasta fica os icones
+        * `components` – aqui ficam os components reutilizaveis, eu adotei um padrão de componentes chamado Atomic Design, nele eu separo os componentes entre pastas chamdas atoms / molecules / organisms / templates, o objetivo é facilitar a estrutura para caso o projeto escale
+        * `providers` – aqui ficam os meus provedores da minha aplicação, como Contextos, Reduxs, Layouts e etc
+        * `dto` – nessa pasta eu deixo as minhas interfaces que utilizo globalmente
+        * `seo` – nessa pasta ficam algumas configurações de seo do meu app
+        * `hooks` – nessa pasta ficam os meus hooks personalizados
+        * `services` – nessa pasta ficam os meus serviços tanto de auth e api
+        * `styles` – nessa pasta fica os meus estilos globais da aplicação
+        * `utils` – aqui ficam minhas funções uteis que são utilizados em mais de um local
+
+
+## Requisitos para rodar o projeto
+- [Npm](https://www.npmjs.com/)
+- [NodeJs](https://nodejs.org/en/)
+
+## Como rodar o projeto
+
+Para rodar é essencial que tenha o [node](https://nodejs.org/en/) instalado, caso não tenha siga o passo a passo logo abaixo
+
+#### Ubuntu 
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Debian, as root
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#### [Outra distribuição Linux](https://nodejs.org/en/download/package-manager/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### Windows
+Acesse o site do [NodeJs](https://nodejs.org/en/) e instale a versão LTS
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Com tudo já instalado primeiro faça o clone deste repositório
+```
+https://github.com/LeonardoMessias98/company-hero-animes.git
+```
 
-## Learn More
+Acesse a pasta do repositório pelo terminal
+```
+  cd company-hero-animes
+```
 
-To learn more about Next.js, take a look at the following resources:
+Agora instale as dependencias do projeto
+```yarn``` ou ```npm install```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Apos ter instalado as dependencias do projeto é necessário rodar o servidor local do projeto
+```
+yarn start
+```
+ou
+```
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A aplicação rodará na porta 3000 do seu localhost -> [http://localhost:3000](http://localhost:3000/)
 
-## Deploy on Vercel
+## Tecnologias e bibliotecas
+* [`react`](https://pt-br.reactjs.org/)
+* [`ant-design`](https://ant.design/docs/react/introduce)
+* [`typescript`](https://www.typescriptlang.org/)
+* [`eslint`](https://eslint.org/)
+* [`contextApi`](https://pt-br.reactjs.org/docs/context.html)
+* [`react-icons`](https://react-icons.github.io/react-icons/)
+* [`axios`](https://github.com/axios/axios)
+* [`styled-components`](https://styled-components.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Duvidas
+  Para qualquer duvida estou a total disposição para explicar melhor o meu código e as decisões que tomei de arquitetura. ![Webp net-resizeimage]
