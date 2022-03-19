@@ -22,6 +22,43 @@ const SingleAnimePage = ({ anime, relatedAnimes }: ISingleAnimePageProps) => {
     <>
       <Head>
         <title>{anime.attributes.canonicalTitle} - Company Hero Animes</title>
+        <meta name="description" content={anime.attributes.description} />
+
+        <meta
+          name="keywords"
+          content={anime.attributes.canonicalTitle.split(" ").join(",")}
+        />
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`${anime.attributes.canonicalTitle} - Company Hero Animes`}
+        />
+        <meta
+          property="og:description"
+          content={anime.attributes.description.slice(0, 200)}
+        />
+        <meta
+          property="og:url"
+          content="https://company-hero-animes.vercel.app"
+        />
+        <meta
+          property="og:site_name"
+          content={`${anime.attributes.canonicalTitle} - Company Hero Animes`}
+        />
+        <meta
+          property="og:image"
+          content={anime.attributes.posterImage.medium}
+        />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content={
+            anime.attributes.posterImage.tiny ||
+            anime.attributes.posterImage.small
+          }
+        />
       </Head>
       <SingleAnimeModule />
     </>

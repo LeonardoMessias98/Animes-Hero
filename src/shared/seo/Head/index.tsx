@@ -6,7 +6,30 @@ const Head = () => {
     <NextHead>
       <meta name="theme-color" content="" />
       <link rel="shortcut icon" href="#" />
-      <title>Company Hero Animes</title>
+      <title>Home - Company Hero Animes</title>
+
+      <meta name="description" content="Seus animes em um só lugar" />
+
+      <meta
+        name="keywords"
+        content="animes, mangas, animes online, assistir animes, free animes, naruto, dragon ball, kimetsu no yaba, shingeki no kyojin"
+      />
+
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Company Hero Animes" />
+      <meta property="og:description" content="Seus animes em um só lugar" />
+      <meta
+        property="og:url"
+        content="https://company-hero-animes.vercel.app"
+      />
+      <meta property="og:site_name" content="Company Hero Animes" />
+      <meta property="og:image" content="https://i.imgur.com/cT4NV0x.png" />
+      <meta
+        property="og:image"
+        itemProp="image"
+        content="https://i.imgur.com/BofOu15.png"
+      />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
