@@ -19,6 +19,7 @@ const HomePage: NextPage<IHomePageProps> = ({
   categories,
   animes,
 }) => {
+  const isServer = () => typeof window === `undefined`;
   const { state, setState } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const HomePage: NextPage<IHomePageProps> = ({
     }
   }, [trendingAnimes]);
 
-  return <HomeModule />;
+  return isServer() ? null : <HomeModule />;
 };
 
 export async function getStaticProps() {
