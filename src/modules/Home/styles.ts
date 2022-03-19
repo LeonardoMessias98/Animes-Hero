@@ -9,5 +9,10 @@ export const Content = styled.div`
   width: 100%;
   height: max-content;
   max-width: 1800px;
-  padding: 30px 0 0;
+  padding: 30px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;

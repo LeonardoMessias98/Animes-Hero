@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 1800px;
-  margin-top: 12rem;
+  margin-top: 6rem;
   padding: 0 30px;
 
   h2 {
@@ -15,7 +15,7 @@ export const Container = styled.div`
     margin: 0;
 
     @media (max-width: 600px) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 `;

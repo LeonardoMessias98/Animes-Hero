@@ -29,8 +29,8 @@ export const Container = styled.div`
     position: absolute;
     color: #fff;
     font-size: 4rem;
-    top: 45px;
-    right: 45px;
+    top: 35px;
+    right: 35px;
     cursor: pointer;
   }
 `;

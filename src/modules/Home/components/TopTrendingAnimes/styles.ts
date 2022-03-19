@@ -9,11 +9,15 @@ export const Container = styled.div`
   align-items: center;
 
   z-index: 1;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const TrendingCard = styled.div<ITrendingCardProps>`
-  width: 360px;
-  height: 720px;
+  width: 22.5rem;
+  height: 45rem;
   margin: 0 0.75rem;
   position: relative;
   overflow: hidden;

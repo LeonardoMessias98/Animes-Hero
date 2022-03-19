@@ -29,7 +29,9 @@ const AnimeContent = ({ onDisplayTrailer }: IAnimeContentProps) => {
             </span>
           </section>
 
-          <button onClick={handleDisplayTrailerModal}>Assistir</button>
+          {state.singleAnime?.attributes?.youtubeVideoId && (
+            <button onClick={handleDisplayTrailerModal}>Assistir</button>
+          )}
         </div>
 
         <div className="sinopse">

@@ -5,12 +5,12 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  width: 380px;
-  height: 522px;
+  width: 23.75rem;
+  height: 32.625rem;
 `;
 
 export const Content = styled.div`
-  width: 360px;
+  width: 22.5rem;
   height: 100%;
   margin-right: 1rem;
   position: relative;

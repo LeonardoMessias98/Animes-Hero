@@ -27,7 +27,8 @@ const TrailerModal = ({ onDisplayTrailer }: ITrailerModalProps) => {
           height: "500",
           playerVars: {
             autoplay: 1,
-            controls: 0,
+            controls: 2,
+            loop: 1,
           },
         }}
       />

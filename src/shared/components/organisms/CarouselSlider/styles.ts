@@ -12,6 +12,10 @@ export const Container = styled.div`
     right: 0;
   }
 
+  .alice-carousel__dots {
+    display: none;
+  }
+
   .alice-carousel__prev-btn,
   .alice-carousel__next-btn {
     position: absolute;

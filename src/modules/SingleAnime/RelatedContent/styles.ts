@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1800px;
   margin-top: 4rem;
+  padding: 0 30px;
 
   h2 {
     display: flex;
@@ -16,11 +17,6 @@ export const Container = styled.div`
     font-weight: 600;
     font-size: 2.5rem;
     margin: 0;
-
-    svg {
-      color: ${(props) => props.theme.colors.primary};
-      margin: 0 0.5rem;
-    }
 
     @media (max-width: 600px) {
       font-size: 4rem;

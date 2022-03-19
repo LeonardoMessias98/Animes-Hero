@@ -6,10 +6,16 @@ export const Container = styled.div`
 
   width: 100%;
   max-width: 770px;
+  margin-left: 30px;
   z-index: 2;
 
   span {
     color: ${(props) => props.theme.colors.primary} !important;
+  }
+
+  @media (max-width: 1200px) {
+    position: relative;
+    margin-top: 4rem;
   }
 `;
 
@@ -17,8 +23,8 @@ export const Title = styled.h1`
   font-family: "Asap", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 124px;
-  line-height: 114px;
+  font-size: 7.75rem;
+  line-height: 7.125rem;
 
   color: #ffffff;
 
@@ -60,4 +66,10 @@ export const Button = styled.button`
   cursor: pointer;
 
   text-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(-5%);
+  }
 `;
