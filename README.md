@@ -1,6 +1,6 @@
 ![image](https://i.imgur.com/cT4NV0x.png)
 
-#### Acesse aqui -> https://company-hero-animes.vercel.app/
+#### Acesse aqui -> https://animes-hero.vercel.app
 
 ## Funcionalidades
 
