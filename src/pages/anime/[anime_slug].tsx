@@ -8,14 +8,14 @@ import { api } from "shared/utils/api";
 
 interface ISingleAnimePageProps {
   anime: IAnime;
-  relatedAnimes: IAnime[];
+  relatedMangas: IAnime[];
 }
 
-const SingleAnimePage = ({ anime, relatedAnimes }: ISingleAnimePageProps) => {
+const SingleAnimePage = ({ anime, relatedMangas }: ISingleAnimePageProps) => {
   const { state, setState } = useContext(GlobalContext);
 
   useEffect(() => {
-    if (anime) setState({ ...state, singleAnime: anime, relatedAnimes });
+    if (anime) setState({ ...state, singleAnime: anime, relatedMangas });
   }, [anime]);
 
   return (
@@ -76,24 +76,25 @@ export const getServerSideProps = async (context: any) => {
 
   const anime = await getAnime();
 
-  const getRelatedAnimes = async () => {
+  const getRelatedMangas = async () => {
     try {
       const response = await api.get(`/anime/${anime.id}/categories`);
 
       const categories = response.data.data;
 
-      const animes = await api.get(`/categories/${categories[0].id}/anime`);
 
-      return animes.data.data;
+      const mangas = await api.get(`/categories/${categories[0].id}/manga`);
+
+      return mangas.data.data;
     } catch (error) {}
   };
 
-  const relatedAnimes = await getRelatedAnimes();
+  const relatedMangas = await getRelatedMangas();
 
   return {
     props: {
       anime,
-      relatedAnimes,
+      relatedMangas,
     },
   };
 };

@@ -6,7 +6,7 @@ type GlobalType = {
   animes: IAnime[];
   categories: ICategory[];
   trendingAnimes: IAnime[];
-  relatedAnimes: IAnime[];
+  relatedMangas: IAnime[];
   animesByCategory: IAnime[][];
 };
 

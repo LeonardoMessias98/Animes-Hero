@@ -10,9 +10,15 @@ import { Container } from "./styles";
 
 interface ICarouselSliderProps extends HTMLAttributes<HTMLElement> {
   items: IAnime[];
+  disableClick?: boolean;
 }
 
-const CarouselSlider = ({ items, children, ...rest }: ICarouselSliderProps) => {
+const CarouselSlider = ({
+  items,
+  children,
+  disableClick,
+  ...rest
+}: ICarouselSliderProps) => {
   const responsivenessSettings = {
     0: { items: 1 },
     790: { items: 2 },
@@ -26,7 +32,14 @@ const CarouselSlider = ({ items, children, ...rest }: ICarouselSliderProps) => {
       <AliceCarousel
         autoWidth
         items={items?.map(
-          (item) => item && <SliderCard data={item} key={item.id} />
+          (item) =>
+            item && (
+              <SliderCard
+                data={item}
+                key={item.id}
+                disableClick={disableClick}
+              />
+            )
         )}
         renderDotsItem={() => {}}
         renderNextButton={() => (

@@ -7,10 +7,16 @@ import { Container } from "./styles";
 
 const RelatedContent = () => {
   const { state } = useContext(GlobalContext);
+  const relatedMangas = state.relatedMangas;
+
+  const mangasWithImage = relatedMangas?.filter(
+    (manga) => manga.attributes.posterImage.large
+  );
+
   return (
     <Container>
-      <h2>Conteúdos relacionados</h2>
-      <CarouselSlider items={state.relatedAnimes} />
+      <h2>Mangas relacionados</h2>
+      <CarouselSlider items={mangasWithImage} disableClick />
     </Container>
   );
 };

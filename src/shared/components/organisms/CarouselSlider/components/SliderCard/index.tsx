@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { message } from "antd";
 import { useRouter } from "next/dist/client/router";
 
 import { IAnime } from "shared/dto";
@@ -7,12 +8,18 @@ import { Container, Content } from "./styles";
 
 interface ISliderCard {
   data: IAnime;
+  disableClick?: boolean;
 }
 
-const SliderCard = ({ data, ...rest }: ISliderCard) => {
+const SliderCard = ({ data, disableClick, ...rest }: ISliderCard) => {
   const router = useRouter();
 
   const handleAccessAnimePage = () => {
+    if (disableClick) {
+      message.warn('Recurso não disponível no momento')
+      return
+    }
+    
     router.push(`/anime/${data.id}`);
   };
 
