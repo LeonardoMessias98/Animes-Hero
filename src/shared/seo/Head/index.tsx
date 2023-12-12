@@ -6,7 +6,7 @@ const Head = () => {
     <NextHead>
       <meta name="theme-color" content="" />
       <link rel="shortcut icon" href="#" />
-      <title>Home - Company Hero Animes</title>
+      <title>Home - Animes Hero</title>
 
       <meta name="description" content="Seus animes em um só lugar" />
 
@@ -17,13 +17,13 @@ const Head = () => {
 
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Company Hero Animes" />
+      <meta property="og:title" content="Animes Hero" />
       <meta property="og:description" content="Seus animes em um só lugar" />
       <meta
         property="og:url"
-        content="https://company-hero-animes.vercel.app"
+        content="https://animes-hero.vercel.app/"
       />
-      <meta property="og:site_name" content="Company Hero Animes" />
+      <meta property="og:site_name" content="Animes Hero" />
       <meta property="og:image" content="https://i.imgur.com/cT4NV0x.png" />
       <meta
         property="og:image"

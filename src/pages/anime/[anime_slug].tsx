@@ -21,7 +21,7 @@ const SingleAnimePage = ({ anime, relatedMangas }: ISingleAnimePageProps) => {
   return (
     <>
       <Head>
-        <title>{anime.attributes.canonicalTitle} - Company Hero Animes</title>
+        <title>{anime.attributes.canonicalTitle} - Animes Hero</title>
         <meta name="description" content={anime.attributes.description} />
 
         <meta
@@ -33,7 +33,7 @@ const SingleAnimePage = ({ anime, relatedMangas }: ISingleAnimePageProps) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`${anime.attributes.canonicalTitle} - Company Hero Animes`}
+          content={`${anime.attributes.canonicalTitle} - Animes Hero`}
         />
         <meta
           property="og:description"
@@ -41,11 +41,11 @@ const SingleAnimePage = ({ anime, relatedMangas }: ISingleAnimePageProps) => {
         />
         <meta
           property="og:url"
-          content="https://company-hero-animes.vercel.app"
+          content="https://animes-hero.vercel.app/"
         />
         <meta
           property="og:site_name"
-          content={`${anime.attributes.canonicalTitle} - Company Hero Animes`}
+          content={`${anime.attributes.canonicalTitle} - Animes Hero`}
         />
         <meta
           property="og:image"
